@@ -22,15 +22,15 @@ async def voice_websocket(websocket: WebSocket):
     try:
         while True:
 
+                    # -----------------------------
+            # Receive message from client
+            # -----------------------------
+            message = await websocket.receive()
+
             # -----------------------------
             # Start latency measurement
             # -----------------------------
             start_time = time.time()
-
-            # -----------------------------
-            # Receive message from client
-            # -----------------------------
-            message = await websocket.receive()
 
             # If client sends audio bytes
             if "bytes" in message and message["bytes"] is not None:
