@@ -1,5 +1,11 @@
 fastapi
-uvicorn
+uvicorn[standard]
+python-multipart
 psycopg2-binary
-redis
+python-dotenv
+faster-whisper
+gtts
 langdetect
+redis
+rapidfuzz
+word2number
