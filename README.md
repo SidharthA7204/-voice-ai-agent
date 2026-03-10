@@ -1,207 +1,149 @@
-🎙️ Voice AI Agent – Smart Doctor Appointment Assistant
+# Voice AI Appointment Agent
 
-A Voice-Enabled AI Assistant that allows users to book, cancel, and reschedule doctor appointments using voice commands.
-The system converts speech to text, understands user intent, interacts with a backend scheduler, and responds with AI-generated voice feedback.
+An AI-powered voice assistant that allows users to manage appointments using natural voice commands.  
+The system converts speech into text, processes the intent, performs backend actions, and responds with synthesized speech.
 
-This project demonstrates AI integration, backend engineering, API design, and voice interaction systems.
+This project demonstrates an **Agentic AI workflow** where voice input triggers automated backend actions through an intelligent processing pipeline.
 
-🚀 Features
+## Live Demo
 
-✅ Voice command based appointment booking
-✅ Automatic speech-to-text processing
-✅ AI intent detection for user commands
-✅ Doctor schedule management
-✅ Appointment booking system
-✅ Appointment cancellation
-✅ Appointment rescheduling
-✅ Language detection support
-✅ Text-to-speech response generation
-✅ Memory system for conversation context
-✅ REST API with interactive documentation
+Try the working application here:
+LIVE_DEMO_LINK:https://voice-ai-agent-xtfx.onrender.com/docs
 
-🧠 Example Voice Commands
+## Demo Video
 
-Users can interact naturally with the assistant:
+Watch the system working with real voice commands.
 
-Book appointment with doctor tomorrow at 4 PM
-Cancel my appointment tomorrow
-Reschedule my appointment to 6 PM
-I want to meet the doctor tomorrow
+VIDEO_LINK:https://drive.google.com/file/d/1xI_dw11TQyMBtlgLnMJ5-8cbrwzskhiO/view
 
-The AI agent automatically:
+---
 
-1️⃣ Converts voice → text
-2️⃣ Detects intent
-3️⃣ Calls the correct API
-4️⃣ Returns a voice response
+## Features
 
-🏗️ System Architecture
+• Voice-based interaction with the system  
+• Book, cancel, and reschedule appointments using natural language  
+• Real-time speech-to-text transcription  
+• AI-based intent recognition  
+• Backend appointment scheduling logic  
+• Text-to-speech audio responses  
+• REST API-based backend architecture
+
+---
+
+## System Architecture
 User Voice
-     │
-     ▼
+↓
 Speech-to-Text
-     │
-     ▼
-Intent Detection (AI Agent)
-     │
-     ▼
-Appointment Scheduler
-     │
-     ▼
+↓
+Intent Processing / Command Parsing
+↓
+Appointment Scheduler API
+↓
 Database
-     │
-     ▼
-Text-to-Speech Response
-🛠️ Tech Stack
-Backend
-
-Python
-
-FastAPI
-
-Uvicorn
-
-AI / NLP
-
-Speech Recognition
-
-Whisper / STT
-
-LangDetect
-
-RapidFuzz (intent matching)
-
-Voice Processing
-
-Speech-to-Text
-
+↓
 Text-to-Speech
+↓
+Audio Response
 
-gTTS
 
-Database
+---
 
-SQLite
+## Tech Stack
 
-Tools
+### Backend
+- Python
+- FastAPI
 
-Git & GitHub
+### AI & Voice Processing
+- Speech-to-Text
+- Text-to-Speech
+- Natural Language Command Parsing
 
-REST APIs
+### Database
+- SQL / PostgreSQL (if used)
 
-Swagger Documentation
+### Tools
+- Git
+- Postman
+- VS Code
 
-📂 Project Structure
+---
+## Example Voice Commands
+
+Book appointment:Book an appointment with Doctor Albert tomorrow at 4 PM
+Cancel appointment:Cancel my appointment with Doctor Albert tomorrow
+Reschedule appointment:Move my appointment with Doctor Albert to Friday at 5 PM
+
+
+---
+
+## API Workflow
+
+1. User speaks a command
+2. Audio is converted into text using Speech-to-Text
+3. The command is processed by an intent parser
+4. Backend scheduling API executes the action
+5. System generates response
+6. Response is converted into speech using Text-to-Speech
+
+---
+
+## Project Structure
 voice-ai-agent
 │
 ├── agent
-│   └── intent_parser.py
-│
-├── backend
-│   └── routes
-│       └── websocket.py
-│
-├── database
-│   └── db.py
-│
-├── memory
-│   └── session_memory.py
-│
-├── scheduler
-│   └── appointment_scheduler.py
+│ └── intent_parser.py
 │
 ├── services
-│   ├── speech_to_text.py
-│   ├── text_to_speech.py
-│   └── language_detector.py
+│ ├── speech_to_text.py
+│ └── text_to_speech.py
+│
+├── database
+│ └── db.py
 │
 ├── main.py
-├── requirements.txt
-└── README.md
-⚙️ Installation
-1️⃣ Clone the repository
-git clone https://github.com/SidharthA7204/-voice-ai-agent.git
-cd voice-ai-agent
-2️⃣ Create virtual environment
-python -m venv venv
+│
+└── requirements.txt
 
-Activate:
 
-Windows
+---
 
-venv\Scripts\activate
-3️⃣ Install dependencies
+## How to Run the Project
+
+### 1 Install dependencies
 pip install -r requirements.txt
-▶️ Run the Application
 
-Start the FastAPI server:
 
+### 2 Start the server
 uvicorn main:app --reload
 
-Server will start at:
 
-http://127.0.0.1:8000
-📄 API Documentation
+### 3 Test APIs
 
-Interactive API docs:
+Use Postman or curl to send audio requests.
 
-http://127.0.0.1:8000/docs
+---
 
-Available APIs:
+## Future Improvements
 
-Method	Endpoint	Description
-GET	/doctors	View doctor schedules
-POST	/book-appointment	Book appointment
-DELETE	/cancel-appointment	Cancel appointment
-PUT	/reschedule-appointment	Reschedule appointment
-POST	/ai-agent	Process AI command
-POST	/voice-agent	Voice interaction endpoint
-POST	/text-to-speech	Convert text to audio
-POST	/detect-language	Detect language
-POST	/memory	Manage conversation memory
-🎤 Voice Workflow
+• Integrate LLM-based intent understanding  
+• Add multi-user authentication  
+• Add calendar integrations (Google Calendar)  
+• Implement vector search for contextual memory  
+• Deploy as real-time voice assistant
 
-1️⃣ User speaks a command
-2️⃣ Speech converted to text
-3️⃣ AI detects intent
-4️⃣ Scheduler processes request
-5️⃣ System responds with generated voice
+---
 
-📊 Example Response
-{
- "message": "Appointment booked successfully with Dr. Smith at 4 PM"
-}
+## Author
 
-Audio response is generated for the user.
+Sidharth A  
+Full Stack Developer | AI Systems Enthusiast
 
-📈 Future Improvements
+GitHub: https://github.com/SidharthA7204
+## Demo Video
 
-🔹 Real-time voice streaming
-🔹 Multi-language voice assistant
-🔹 Integration with hospital systems
-🔹 Authentication system
-🔹 Web / mobile interface
-🔹 AI conversation assistant
+Watch the working demo of the Voice AI Appointment Agent:
 
-🎯 Learning Outcomes
+https://youtu.be/YOUR_VIDEO_LINK
 
-This project demonstrates:
 
-AI-driven application design
-
-Voice interface systems
-
-FastAPI backend development
-
-API architecture
-
-Natural language command processing
-
-Real-time voice processing
-
-👨‍💻 Author
-
-Sidharth A
-
-GitHub
-https://github.com/SidharthA7204
