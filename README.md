@@ -7,12 +7,12 @@ This project demonstrates an **Agentic AI workflow** where voice input triggers 
 
 ## Live Demo
 
-Try the working application here.
+Try the working application here:
 LIVE_DEMO_LINK:https://voice-ai-agent-xtfx.onrender.com/docs
 
 ## Demo Video
 
-Watch the system working with real voice commands.
+Watch the system working with real voice commands:
 
 VIDEO_LINK:https://drive.google.com/file/d/1xI_dw11TQyMBtlgLnMJ5-8cbrwzskhiO/view
 
